@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+	<style>
+		* ,html {
+			margin:0 auto; 
+			padding:0;
+		}
+		body {
+			/*background: gray;*/
+		}
+		@media (max-width: 1442px) {
+			html {
+				font-size: 192px;
+			}
+		}
+		@media (max-width: 1282px) {
+			html {
+				font-size: 170.66666667px;
+			}
+		}
+		@media (max-width: 1026px) {
+			html {
+				font-size: 136.53333333px;
+			}
+		}
+		@media (max-width: 962px) {
+			html {
+				font-size: 128px;
+			}
+		}
+		@media (max-width: 952px) {
+			html {
+				font-size: 126.66666667px;
+			}
+		}
+		@media (max-width: 902px) {
+			html {
+				font-size: 120px;
+			}
+		}
+		@media (max-width: 802px) {
+			html {
+				font-size: 106.66666667px;
+			}
+		}
+		@media (max-width: 775px) {
+			html {
+				font-size: 103.06666667px;
+			}
+		}
+		@media (max-width: 770px) {
+			html {
+				font-size: 102.4px;
+			}
+		}
+		@media (max-width: 738px) {
+			html {
+				font-size: 98.13333333px;
+			}
+		}
+		@media (max-width: 734px) {
+			html {
+				font-size: 97.6px;
+			}
+		}
+		@media (max-width: 733px) {
+			html {
+				font-size: 97.46666667px;
+			}
+		}
+		@media (max-width: 669px) {
+			html {
+				font-size: 88.93333333px;
+			}
+		}
+		@media (max-width: 642px) {
+			html {
+				font-size: 85.33333333px;
+			}
+		}
+		@media (max-width: 602px) {
+			html {
+				font-size: 80px;
+			}
+		}
+		@media (max-width: 570px) {
+			html {
+				font-size: 75.73333333px;
+			}
+		}
+		@media (max-width: 535px) {
+			html {
+				font-size: 71.06666667px;
+			}
+		}
+		@media (max-width: 437px) {
+			html {
+				font-size: 58px;
+			}
+		}
+		@media (max-width: 416px) {
+			html {
+				font-size: 55.2px;
+			}
+		}
+		@media (max-width: 413px) {
+			html {
+				font-size: 54.8px;
+			}
+		}
+		@media (max-width: 386px) {
+			html {
+				font-size: 51.2px;
+			}
+		}
+		@media (max-width: 377px) {
+			html {
+				font-size: 50px;
+			}
+		}
+		@media (max-width: 362px) {
+			html {
+				font-size: 48px;
+			}
+		}
+		@media (max-width: 322px) {
+			html {
+				font-size: 42.66666667px;
+			}
+		}
+
+		.five{
+			background-color: hotpink;
+		}
+		.five >div{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.five .browser{
+
+			height:7rem;
+			width: 100%;
+			flex: 1;
+			position: relative;
+			background: #fff;
+		}
+
+		.five .browser .line{
+			position: absolute;
+			/*background-color: blue;*/
+		}
+		.five .browser .top{
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 2px;
+		}
+		.five .browser .bottom{
+			bottom: 0px;
+			left: 0px;
+			width: 100%;
+			height: 2px;
+		}
+		.five .browser .left{
+			top: 0px;
+			left: 0px;
+			width: 2px;
+			height: 100%;
+		}
+		.five .browser .right{
+			top: 0px;
+			right: 0px;
+			width: 2px;
+			height: 100%;
+		}
+
+
+
+		/* 页面5的动画效果 */
+		.five{
+			overflow: hidden;
+		}
+		.five .left{
+			transform: translateY(-100%);
+			background-color:red;
+		}
+		.five .top{
+			transform: translateX(100%);
+			background-color:green;
+
+		}
+		.five .bottom{
+			transform: translateX(-100%);
+			background-color:orange;
+
+		}
+		.five .right{
+			transform: translateY(100%);
+			background-color:blue;
+		}
+
+		.five .browser .line{
+	/*transition:  all 1s;
+	transform: translate(0,0);*/
+	/*animation:stepAnimation  10s 5s linear  forwards ;*/
+	animation:stepAnimation  10s 5s linear  both ;
+}
+
+
+
+
+@keyframes stepAnimation{
+	from{
+		/* from中如果不设置 默认使用的是 初始状态 */
+	}
+	to{
+		transform: translate(0,0);
+	}
+
+}
+
+
+.box{
+	width:2rem;
+	height:2rem;
+	/* background:red; */
+	margin:1rem auto;
+	position:relative;
+	/* perspective:500px; */
+
+	transform-style:preserve-3d;
+
+	animation:anm 6s linear infinite;
+	/*background: blue;*/
+	/*z-index: 3;*/
+}
+.item{
+	width:100%;
+	height:100%;
+	position:absolute;
+	line-height:2rem;
+	text-align:center;
+	font-size:30px;
+	opacity:.5;
+
+
+}
+.item:nth-child(1){
+	background:skyblue;
+	transform:translateZ(1rem);
+}
+.item:nth-child(2){
+	background:green;
+	transform:rotateY(180deg) translateZ(1rem);
+}
+.item:nth-child(3){
+	background:lightgray;
+	transform:rotateY(90deg) translateZ(1rem);
+}
+.item:nth-child(4){
+	background:pink;
+	transform:rotateY(-90deg) translateZ(1rem);
+}
+.item:nth-child(5){
+	background:yellow;
+	transform:rotateX(-90deg) translateZ(1rem);
+}
+.item:nth-child(6){
+	background:yellowgreen;
+	transform:rotateX(90deg) translateZ(1rem);
+}
+@keyframes anm {
+	0%{
+		transform:rotateX(360deg) rotateY(360deg);
+	}
+
+}
+
+.zz {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: #D6E6FF;
+	display: none;
+}
+.bottomm {
+	display: none;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:70%;
+	/*background: green;*/
+	margin-top: 15%;
+	font-size: 0.2rem;
+	text-align: left;
+}
+.bottom1 {
+	width:90%;
+	height:100%;
+	padding-top: 0.4rem;
+	text-indent:2em
+}
+/*p {text-indent: 2em;}  */
+.xuwen {
+	width:100%;
+	height:0.3rem;
+	font-size: 0.2rem;
+	text-align: center;
+}
+.quxiao {
+	margin-top: 0.3rem;
+	float:left;
+	margin-left: 0.2rem;
+	line-height: 0.24rem;
+	height: 0.24rem;
+	border:1px solid red;
+	margin-bottom: 0.2rem;
+	background-color: pink;
+	/*color:#fff;*/
+}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.queding {
+	float:right;
+	margin-top: 0.3rem;
+	margin-right: 0.2rem;
+	line-height: 0.24rem;
+	height:0.24rem;
+	border:1px solid red;
+	margin-bottom: 0.2rem;
+	background-color:green;
+	color:red;
+}
+#jieri {
+	display: none;
+	width:60%;
+	height:0.5rem;
+	margin-right: 20%;
+	font-size: 0.4rem;
+	line-height: 0.5rem;
+	text-align: center;
+
+}
+</style>
+</head>
+<body>
+	<div class="section five">
+		<div class="browser">
+			<!-- 设置四根线段 -->
+			<div class="box">
+				<div class="item">龙</div>
+				<div class="item">屈原</div>
+				<div class="item">端午</div>
+				<div class="item">快乐</div>
+				<div class="item">开心</div>
+				<div class="item">节日</div>
+			</div>
+			<div>			
+				<button id="button1">端午快乐</button>	
+			</div>
+
+			<div class="line top"></div>
+			<div class="line bottom"></div>
+			<div class="line left"></div>
+			<div class="line right"></div>
+		</div>
+	</div>
+
+
+	<div id="jieri">节日快乐</div>
+	<div class="zz" id="zhz"></div>
+	<div class="bottomm" id="bmb">
+		<div class="xuwen clearfix">
+			<div class="quxiao"  id="qx">取消</div> <div class="queding" id="qd">确定</div>
+		</div>
+		<div class="bottom1">
+			<p>
+			端午节，为每年农历五月初五。据《荆楚岁时记》记载，因仲夏登高，顺阳在上，五月是仲夏，它的第一个午日正是登高顺阳好天气之日，故五月初五亦称为“端阳节”。此外端午节还称“午日节、五月节、龙舟节、浴兰节”等。端午节是流行于中国以及汉字文化圈诸国的传统文化节日。 端午节起源于中国，最初为古代百越地区（长江中下游及以南一带）崇拜龙图腾的部族举行图腾祭祀的节日，百越之地春秋之前有在农历五月初五以龙舟竞渡形式举行部落图腾祭祀的习俗。后因战国时期的楚国（今湖北）诗人屈原在该日抱石跳汨罗江自尽，统治者为树立忠君爱国标签将端午作为纪念屈原的节日；部分地区也有纪念伍子胥、曹娥等说法。 端午节与春节、清明节、中秋节并称为中国汉族的四大传统节日。
+			</p>
+			<br>
+			<p>自古以来端午节便有划龙舟及食粽等节日活动。自2008年起，端午节被列为国家法定节假日。2006年5月，国务院将其列入首批国家级非物质文化遗产名录；2009年9月，联合国教科文组织正式审议并批准中国端午节列入世界非物质文化遗产，成为中国首个入选世界非遗的节日。</p>
+		</div>
+	</div>
+</body>
+</html>
+<script >
+	var bbb =document.getElementById('button1');
+	var ccc =document.getElementById('qx');
+	var ccc =document.getElementById('qd');
+	  var zhzz =document.getElementById('zhz');
+	   var jierii =document.getElementById('jieri');
+	  var bmbm =document.getElementById('bmb');
+
+	  // var  zzz =document.getElementsByClassName('zz');
+	  var  xuwenlong =document.getElementsByClassName('xuwen');
+	   // var  bottom1 =document.getElementsByClassName('bottom');
+
+	   button1.onclick=function(){
+	   	zhzz.style.display ="block";
+	   	bmbm.style.display='block';
+	   }
+	   qd.onclick =function(){
+	   	zhzz.style.display ="none";
+	   	bmbm.style.display='none';
+	   	jierii.style.display='block';
+
+	   }
+	   qx.onclick =function(){
+	   	zhzz.style.display ="none";
+	   	bmbm.style.display='none';
+	   }
+
+	</script>
