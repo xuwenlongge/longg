@@ -349,6 +349,15 @@
 	text-align: center;
 
 }
+#jiemu {
+	display: none;
+	width:60%;
+	height:0.5rem;
+	margin-right: 20%;
+	font-size: 0.4rem;
+	line-height: 0.5rem;
+	text-align: center;
+}
 </style>
 </head>
 <body>
@@ -356,7 +365,7 @@
 		<div class="browser">
 			<!-- 设置四根线段 -->
 			<div class="box">
-				<div class="item">龙</div>
+				<div class="item">陈平</div>
 				<div class="item">屈原</div>
 				<div class="item">端午</div>
 				<div class="item">快乐</div>
@@ -375,7 +384,8 @@
 	</div>
 
 
-	<div id="jieri">节日快乐</div>
+	<div id="jieri">端午节日快乐</div>
+	<div id="jiemu">节日不快乐</div>
 	<div class="zz" id="zhz"></div>
 	<div class="bottomm" id="bmb">
 		<div class="xuwen clearfix">
@@ -397,6 +407,7 @@
 	var ccc =document.getElementById('qd');
 	  var zhzz =document.getElementById('zhz');
 	   var jierii =document.getElementById('jieri');
+	   var jiermu =document.getElementById('jiemu');
 	  var bmbm =document.getElementById('bmb');
 
 	  // var  zzz =document.getElementsByClassName('zz');
@@ -411,11 +422,14 @@
 	   	zhzz.style.display ="none";
 	   	bmbm.style.display='none';
 	   	jierii.style.display='block';
+	   		jiemu.style.display='none';
 
 	   }
 	   qx.onclick =function(){
 	   	zhzz.style.display ="none";
 	   	bmbm.style.display='none';
+	   	jierii.style.display='none';
+	   	jiemu.style.display='block';
 	   }
 
 	</script>
